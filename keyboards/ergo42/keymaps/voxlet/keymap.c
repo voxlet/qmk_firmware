@@ -9,11 +9,11 @@ extern keymap_config_t keymap_config;
 
 #define KC_____ KC_TRNS
 #define KC_RST RESET
-#define KC_LCA LCA_T(KC_NO)
 #define KC_META MO(_META)
 #define KC_SYMB MO(_SYMB)
 
 #define KC_LCTB LCTL_T(KC_TAB)
+#define KC_LCA LCA_T(KC_NO)
 #define KC_LGGV LGUI_T(KC_GRV)
 #define KC_LCMN LCTL_T(KC_MINS)
 #define KC_SYSP LT(_SYMB, KC_SPC)
@@ -21,7 +21,7 @@ extern keymap_config_t keymap_config;
 #define KC_RCL2 RCTL_T(KC_LANG2)
 #define KC_RAL1 RALT_T(KC_LANG1)
 #define KC_RGDL RGUI_T(KC_DEL)
-#define KC_SGBL SGUI_T(KC_BSLS)
+#define KC_SGUI SGUI_T(KC_NO)
 #define KC_SFEN KC_SFTENT
 #define KC_NXTB LCTL(KC_TAB)
 #define KC_PVTB LCTL(LSFT(KC_TAB))
@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├────┼────┼────┼────┼────┼────┼────┤├────┼────┼────┼────┼────┼────┼────┤
       LGUI,LSPO, Z  , X  , C  , V  , B  ,  N  , M  ,COMM,DOT ,SLSH,SFEN,RGUI,
   // ├────┼────┼────┼────┼────┼────┼────┤├────┼────┼────┼────┼────┼────┼────┤
-      META,HYPR,LCA ,LGGV,LAUS,LCMN,SYSP, MTBS,RCL2,RAL1,RGDL,SGBL,MEH ,SYMB
+      META,HYPR,LCA ,LGGV,LAUS,LCMN,SYSP, MTBS,RCL2,RAL1,RGDL,SGUI,MEH ,SYMB
   // └────┴────┴────┴────┴────┴────┴────┘└────┴────┴────┴────┴────┴────┴────┘
   ),
 
