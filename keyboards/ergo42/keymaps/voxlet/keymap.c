@@ -14,7 +14,6 @@ extern keymap_config_t keymap_config;
 
 #define KC_LCTB LCTL_T(KC_TAB)
 #define KC_LCA LCA_T(KC_NO)
-#define KC_LGGV LGUI_T(KC_GRV)
 #define KC_LCMN LCTL_T(KC_MINS)
 #define KC_SYSP LT(_SYMB, KC_SPC)
 #define KC_MTBS LT(_META, KC_BSPC)
@@ -30,6 +29,7 @@ extern keymap_config_t keymap_config;
 
 enum custom_keycodes {
   KC_LAUS = SAFE_RANGE, // LALT_T(KC_UNDS)
+  KC_LGTL, // LGUI_T(KC_TILD)
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├────┼────┼────┼────┼────┼────┼────┤├────┼────┼────┼────┼────┼────┼────┤
       LGUI,LSPO, Z  , X  , C  , V  , B  ,  N  , M  ,COMM,DOT ,SLSH,SFEN,RGUI,
   // ├────┼────┼────┼────┼────┼────┼────┤├────┼────┼────┼────┼────┼────┼────┤
-      META,HYPR,LCA ,LGGV,LAUS,LCMN,SYSP, MTBS,RCL2,RAL1,RGDL,SGUI,MEH ,SYMB
+      META,HYPR,LCA ,LGTL,LAUS,LCMN,SYSP, MTBS,RCL2,RAL1,RGDL,SGUI,MEH ,SYMB
   // └────┴────┴────┴────┴────┴────┴────┘└────┴────┴────┴────┴────┴────┴────┘
   ),
 
@@ -89,8 +89,13 @@ void shifted_lt(uint16_t mod, uint16_t unshifted, keyrecord_t *record, uint16_t 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case KC_LAUS: {
-      static uint16_t lalc_timer = 0;
-      shifted_lt(KC_LALT, KC_MINS, record, &lalc_timer);
+      static uint16_t laus_timer = 0;
+      shifted_lt(KC_LALT, KC_MINS, record, &laus_timer);
+      return false;
+    }
+    case KC_LGTL: {
+      static uint16_t lgtl_timer = 0;
+      shifted_lt(KC_LGUI, KC_GRV, record, &lgtl_timer);
       return false;
     }
     default: {
