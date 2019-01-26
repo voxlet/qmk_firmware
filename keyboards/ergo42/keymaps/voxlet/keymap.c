@@ -14,34 +14,37 @@ extern keymap_config_t keymap_config;
 
 #define KC_LCTB LCTL_T(KC_TAB)
 #define KC_LCA LCA_T(KC_NO)
+#define KC_LAL2 LALT_T(KC_LANG2)
 #define KC_LCMN LCTL_T(KC_MINS)
 #define KC_SYSP LT(_SYMB, KC_SPC)
 #define KC_MTBS LT(_META, KC_BSPC)
-#define KC_RCL2 RCTL_T(KC_LANG2)
+#define KC_MTDL LT(_META, KC_DEL)
+#define KC_RCEQ RCTL_T(KC_EQL)
 #define KC_RAL1 RALT_T(KC_LANG1)
 #define KC_RGDL RGUI_T(KC_DEL)
 #define KC_SGUI SGUI_T(KC_NO)
 #define KC_SFEN KC_SFTENT
 #define KC_NXTB LCTL(KC_TAB)
 #define KC_PVTB LCTL(LSFT(KC_TAB))
-#define KC_EXPR LCTL(KC_EQL)
-#define KC_CNTR LCTL(KC_MINS)
+#define KC_EXPR LALT(LSFT(KC_UP))
+#define KC_CNTR LALT(LSFT(KC_DOWN))
 
 enum custom_keycodes {
-  KC_LAUS = SAFE_RANGE, // LALT_T(KC_UNDS)
-  KC_LGTL, // LGUI_T(KC_TILD)
+  KC_LGTL = SAFE_RANGE, // LGUI_T(KC_TILD)
 };
+
+// TODO: LGTL, RGDL can be better
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_kc(
   // ┌────┬────┬────┬────┬────┬────┬────┐┌────┬────┬────┬────┬────┬────┬────┐
-      GRV ,GESC, Q  , W  , E  , R  ,  T ,  Y  , U  , I  , O  , P  ,BSLS,BSPC,
+      GRV ,GESC, Q  , W  , E  , R  , T  ,  Y  , U  , I  , O  , P  ,BSLS,BSPC,
   // ├────┼────┼────┼────┼────┼────┼────┤├────┼────┼────┼────┼────┼────┼────┤
       LCA ,LCTB, A  , S  , D  , F  , G  ,  H  , J  , K  , L  ,SCLN,QUOT,ENT ,
   // ├────┼────┼────┼────┼────┼────┼────┤├────┼────┼────┼────┼────┼────┼────┤
       LGUI,LSPO, Z  , X  , C  , V  , B  ,  N  , M  ,COMM,DOT ,SLSH,SFEN,RGUI,
   // ├────┼────┼────┼────┼────┼────┼────┤├────┼────┼────┼────┼────┼────┼────┤
-      META,HYPR,LCA ,LGTL,LAUS,LCMN,SYSP, MTBS,RCL2,RAL1,RGDL,SGUI,MEH ,SYMB
+      META,HYPR,LCA ,LGTL,LAL2,LCMN,SYSP, MTBS,RCEQ,RAL1,RGDL,SGUI,MEH ,SYMB
   // └────┴────┴────┴────┴────┴────┴────┘└────┴────┴────┴────┴────┴────┴────┘
   ),
 
@@ -53,15 +56,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├────┼────┼────┼────┼────┼────┼────┤├────┼────┼────┼────┼────┼────┼────┤
       ____,____,GRV ,LBRC,LCBR,LPRN,EQL , PLUS,RPRN,RCBR,RBRC,SLSH,____,____,
   // ├────┼────┼────┼────┼────┼────┼────┤├────┼────┼────┼────┼────┼────┼────┤
-      ____,____,____,____,____,____,____, ____,____,____,____,____,____,____
+      ____,____,____,____,____,____,____, MTDL,____,____,____,____,____,____
   // └────┴────┴────┴────┴────┴────┴────┘└────┴────┴────┴────┴────┴────┴────┘
   ),
 
   [_META] = LAYOUT_kc(
   // ┌────┬────┬────┬────┬────┬────┬────┐┌────┬────┬────┬────┬────┬────┬────┐
-      ____, F1 , F2 , F3 , F4 , F5 , F6 , PGUP,PVTB, UP ,NXTB,CNTR,HOME,____,
+      ____, F1 , F2 , F3 , F4 , F5 , F6 , PGUP,PVTB, UP ,NXTB,EXPR,HOME,____,
   // ├────┼────┼────┼────┼────┼────┼────┤├────┼────┼────┼────┼────┼────┼────┤
-      RST , F7 , F8 , F9 ,F10 ,F11 ,F12 , PGDN,LEFT,DOWN,RGHT,EXPR,END ,____,
+      RST , F7 , F8 , F9 ,F10 ,F11 ,F12 , PGDN,LEFT,DOWN,RGHT,CNTR,END ,____,
   // ├────┼────┼────┼────┼────┼────┼────┤├────┼────┼────┼────┼────┼────┼────┤
       ____,____,____,____,BRID,BRIU,____, MUTE,VOLD,VOLU,MPLY,RSFT,____,____,
   // ├────┼────┼────┼────┼────┼────┼────┤├────┼────┼────┼────┼────┼────┼────┤
@@ -88,11 +91,6 @@ void shifted_lt(uint16_t mod, uint16_t unshifted, keyrecord_t *record, uint16_t 
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    case KC_LAUS: {
-      static uint16_t laus_timer = 0;
-      shifted_lt(KC_LALT, KC_MINS, record, &laus_timer);
-      return false;
-    }
     case KC_LGTL: {
       static uint16_t lgtl_timer = 0;
       shifted_lt(KC_LGUI, KC_GRV, record, &lgtl_timer);
