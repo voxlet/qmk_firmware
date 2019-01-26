@@ -22,12 +22,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0xBC42
-#define PRODUCT_ID      0x0042
-#define DEVICE_VER      0x0100
-#define MANUFACTURER    Biacco42
-#define PRODUCT         Ergo42
-#define DESCRIPTION     The Answer to the Ultimate Question of Life, the Universe, and at least Keyboards
+#define VENDOR_ID 0xBC42
+#define PRODUCT_ID 0x0042
+#define DEVICE_VER 0x0100
+#define MANUFACTURER Biacco42
+#define PRODUCT Ergo42
+#define DESCRIPTION The Answer to the Ultimate Question of Life, the Universe, and at least Keyboards
 
 /* key matrix size */
 // Rows are doubled-up
@@ -35,8 +35,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_COLS 7
 
 // wiring of each half
-#define MATRIX_ROW_PINS { D7, E6, B4, B5 }
-#define MATRIX_COL_PINS { F5, F6, F7, B1, B3, B2, B6 }
+#define MATRIX_ROW_PINS \
+    { D7, E6, B4, B5 }
+#define MATRIX_COL_PINS \
+    { F5, F6, F7, B1, B3, B2, B6 }
 // #define MATRIX_COL_PINS { B6, B2, B3, B1, F7, F6 } //uncomment this line and comment line above if you need to reverse left-to-right key order
 
 /* COL2ROW, ROW2COL*/
@@ -60,7 +62,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* ws2812 RGB LED */
 #define RGB_DI_PIN D3
-#define RGBLED_NUM 12    // Number of LEDs
+#define RGBLED_NUM 12  // Number of LEDs
 
 /*
  * Feature disable options
