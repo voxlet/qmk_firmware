@@ -2,10 +2,6 @@
 #include "action_layer.h"
 #include "voxlet.h"
 
-enum custom_keycodes {
-  KC_LGTL = SAFE_RANGE, // LGUI_T(KC_TILD)
-};
-
 // TODO: LGTL, RGDL can be better
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -17,7 +13,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├────┼────┼────┼────┼────┼────┼────┤├────┼────┼────┼────┼────┼────┼────┤
       LGUI,LSPO, Z  , X  , C  , V  , B  ,  N  , M  ,COMM,DOT ,SLSH,SFEN,RGUI,
   // ├────┼────┼────┼────┼────┼────┼────┤├────┼────┼────┼────┼────┼────┼────┤
-      META,HYPR,LCA ,LGTL,LAL2,LCSP,SYEQ, MTMN,RCBS,RAL1,RGDL,SGUI,MEH ,SYMB
+      META,HYPR,LCA ,LGUI,LAL2,LCSP,SYEQ, MTMN,RCBS,RAL1,RGUI,SGUI,MEH ,SYMB
   // └────┴────┴────┴────┴────┴────┴────┘└────┴────┴────┴────┴────┴────┴────┘
   ),
 
@@ -46,31 +42,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 
 };
-
-void shifted_lt(uint16_t mod, uint16_t unshifted, keyrecord_t *record, uint16_t *timer) {
-  if (record->event.pressed) {
-    *timer = timer_read();
-    register_mods(MOD_BIT(mod));
-  }
-  else {
-    unregister_mods(MOD_BIT(mod));
-    if (timer_elapsed(*timer) < TAPPING_TERM) {
-      register_mods(MOD_BIT(KC_LSFT));
-      tap_code(unshifted);
-      unregister_mods(MOD_BIT(KC_LSFT));
-    }
-  }
-}
-
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  switch (keycode) {
-    case KC_LGTL: {
-      static uint16_t lgtl_timer = 0;
-      shifted_lt(KC_LGUI, KC_GRV, record, &lgtl_timer);
-      return false;
-    }
-    default: {
-      return true;
-    }
-  }
-}

@@ -19,10 +19,13 @@
 #define KC_RCBS RCTL_T(KC_BSPC)
 #define KC_RCDL RCTL_T(KC_DEL)
 #define KC_RAL1 RALT_T(KC_LANG1)
-#define KC_RGDL RGUI_T(KC_DEL)
 #define KC_SGUI SGUI_T(KC_NO)
 #define KC_SFEN KC_SFTENT
 #define KC_NXTB LCTL(KC_TAB)
 #define KC_PVTB LCTL(LSFT(KC_TAB))
 #define KC_EXPR LALT(LSFT(KC_UP))
 #define KC_CNTR LALT(LSFT(KC_DOWN))
+
+// enum custom_keycodes {
+//   KC_LGTL = SAFE_RANGE, // LGUI_T(KC_TILD)
+// };
