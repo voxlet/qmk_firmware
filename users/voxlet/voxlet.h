@@ -5,7 +5,7 @@
 #define _META 2
 #define _ADJUST 16
 
-#define KC_____ KC_TRNS
+#define KC_ KC_TRNS
 #define KC_RST RESET
 #define KC_META MO(_META)
 #define KC_SYMB MO(_SYMB)
