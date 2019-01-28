@@ -26,6 +26,23 @@
 #define KC_EXPR LALT(LSFT(KC_UP))
 #define KC_CNTR LALT(LSFT(KC_DOWN))
 
+// B for Bling
+#define KC_BTOG RGB_TOG // Toggle #define RGB lighting on or off
+#define KC_BMOD RGB_MOD // Cycle through modes, reverse direction when Shift is held
+#define KC_BHUI RGB_HUI // Increase hue
+#define KC_BHUD RGB_HUD // Decrease hue
+#define KC_BSAI RGB_SAI // Increase saturation
+#define KC_BSAD RGB_SAD // Decrease saturation
+#define KC_BVAI RGB_VAI // Increase value (brightness)
+#define KC_BVAD RGB_VAD // Decrease value (brightness)
+#define KC_BMPL RGB_M_P // Static (no animation) mode
+#define KC_BMBR RGB_M_B // Breathing animation mode
+#define KC_BMRB RGB_M_R // Rainbow animation mode
+#define KC_BMSW RGB_M_SW // Swirl animation mode
+#define KC_BMSN RGB_M_SN // Snake animation mode
+#define KC_BMKR RGB_M_K // "Knight Rider" animation mode
+#define KC_BMGR RGB_M_G // Static gradient animation mode
+
 // enum custom_keycodes {
 //   KC_LGTL = SAFE_RANGE, // LGUI_T(KC_TILD)
 // };
