@@ -14,7 +14,7 @@
 #define KC_HYL2 HYPR_T(KC_LANG2)
 #define KC_LCA LCA_T(KC_NO)
 #define KC_LAL2 LALT_T(KC_LANG2)
-#define KC_LAGV LALT_T(KC_GRV)
+#define KC_LAEN LALT_T(KC_ENT)
 #define KC_LCEQ LCTL_T(KC_EQL)
 #define KC_LCSP LCTL_T(KC_SPC)
 #define KC_SYEN LT(_SYMB, KC_ENT)
@@ -26,7 +26,8 @@
 #define KC_RSBS RSFT_T(KC_BSPC)
 #define KC_RSDL RSFT_T(KC_DEL)
 #define KC_RAL1 RALT_T(KC_LANG1)
-#define KC_RAEQ RALT_T(KC_EQL)
+#define KC_RAEN RALT_T(KC_ENT)
+#define KC_RADL RALT_T(KC_DEL)
 #define KC_SGUI SGUI_T(KC_NO)
 #define KC_MEL1 MEH_T(KC_LANG1)
 #define KC_SFEN KC_SFTENT
