@@ -25,6 +25,7 @@
 #define KC_RCDL RCTL_T(KC_DEL)
 #define KC_RSBS RSFT_T(KC_BSPC)
 #define KC_RSDL RSFT_T(KC_DEL)
+#define KC_RGDL RGUI_T(KC_DEL)
 #define KC_RAL1 RALT_T(KC_LANG1)
 #define KC_RAEN RALT_T(KC_ENT)
 #define KC_RADL RALT_T(KC_DEL)
