@@ -15,6 +15,7 @@
 #define KC_LCA LCA_T(KC_NO)
 #define KC_LAL2 LALT_T(KC_LANG2)
 #define KC_LAEN LALT_T(KC_ENT)
+#define KC_LATB LALT_T(KC_TAB)
 #define KC_LCEQ LCTL_T(KC_EQL)
 #define KC_LCSP LCTL_T(KC_SPC)
 #define KC_SYEN LT(_SYMB, KC_ENT)
