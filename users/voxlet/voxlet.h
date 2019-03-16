@@ -37,6 +37,9 @@
 #define KC_PVTB LCTL(LSFT(KC_TAB))
 #define KC_EXPR LALT(LSFT(KC_UP))
 #define KC_CNTR LALT(LSFT(KC_DOWN))
+#define KC_AGRV LALT(KC_GRV)
+#define KC_LNG2 KC_LANG2
+#define KC_LNG1 KC_LANG1
 
 // B for Bling
 #define KC_BTOG RGB_TOG // Toggle #define RGB lighting on or off
