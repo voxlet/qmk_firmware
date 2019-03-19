@@ -44,12 +44,20 @@
 #define KC_LA_S LALT_T(KC_S)
 #define KC_LC_D LCTL_T(KC_D)
 #define KC_LS_F LSFT_T(KC_F)
+#define KC_LS_A LSFT_T(KC_A)
+#define KC_LG_S LGUI_T(KC_S)
+#define KC_LA_D LALT_T(KC_D)
+#define KC_LC_F LCTL_T(KC_F)
 #define KC_MT_G LT(_META, KC_G)
 #define KC_SY_H LT(_SYMB, KC_H)
 #define KC_RS_J RSFT_T(KC_J)
 #define KC_RC_K RCTL_T(KC_K)
 #define KC_RA_L RALT_T(KC_L)
 #define KC_RGSC RGUI_T(KC_SCLN)
+#define KC_RC_J RCTL_T(KC_J)
+#define KC_RA_K RALT_T(KC_K)
+#define KC_RG_L RGUI_T(KC_L)
+#define KC_RSSC RSFT_T(KC_SCLN)
 
 // B for Bling
 #define KC_BTOG RGB_TOG // Toggle #define RGB lighting on or off

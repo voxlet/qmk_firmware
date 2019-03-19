@@ -8,7 +8,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ┌────┬────┬────┬────┬────┬────┐┌────┬────┬────┬────┬────┬────┐
       GRV , Q  , W  , E  , R  , T  ,  Y  , U  , I  , O  , P  ,BSLS,
   // ├────┼────┼────┼────┼────┼────┤├────┼────┼────┼────┼────┼────┤
-      LCTB,LG_A,LA_S,LC_D,LS_F,MT_G, SY_H,RS_J,RC_K,RA_L,RGSC,QUOT,
+      LCTB,LS_A,LG_S,LA_D,LC_F,MT_G, SY_H,RC_J,RA_K,RG_L,RSSC,QUOT,
   // ├────┼────┼────┼────┼────┼────┤├────┼────┼────┼────┼────┼────┤
       LSPO, Z  , X  , C  , V  , B  ,  N  , M  ,COMM,DOT ,SLSH,SFEN,
   // ├────┼────┼────┼────┼────┼────┤├────┼────┼────┼────┼────┼────┤
