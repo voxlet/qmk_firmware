@@ -7,9 +7,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ┌────┬────┬────┬────┬────┬────┬────┐┌────┬────┬────┬────┬────┬────┬────┐
       GRV ,GESC, Q  , W  , E  , R  , T  ,  Y  , U  , I  , O  , P  ,BSLS,BSPC,
   // ├────┼────┼────┼────┼────┼────┼────┤├────┼────┼────┼────┼────┼────┼────┤
-      LCA ,LCTB,LS_A,LG_S,LA_D,LC_F,MT_G, SY_H,RC_J,RA_K,RG_L,RSSC,QUOT,ENT ,
+      LCA ,LCTB, A  , S  , D  , F  , G  ,  H  , J  , K  , L,  SCLN,QUOT,ENT ,
   // ├────┼────┼────┼────┼────┼────┼────┤├────┼────┼────┼────┼────┼────┼────┤
-      LGUI,LSPO, Z  , X  , C  , V  , B  ,  N  , M  ,COMM,DOT ,SLSH,SFEN,RGUI,
+      LGUI,LSPO,LG_Z,LA_X, C  , V  , B  ,  N  , M  ,COMM,RADT,RGSL,SFEN,RGUI,
   // ├────┼────┼────┼────┼────┼────┼────┤├────┼────┼────┼────┼────┼────┼────┤
       META,HYL2,LCA ,LGUI,LATB,LCSP,SYMB, META,RSBS,RGDL,RGUI,SGUI,MEL1,SYMB
   // └────┴────┴────┴────┴────┴────┴────┘└────┴────┴────┴────┴────┴────┴────┘
