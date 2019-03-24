@@ -40,7 +40,7 @@
 #define KC_PVTB LCTL(LSFT(KC_TAB))
 #define KC_EXPR LALT(LSFT(KC_UP))
 #define KC_CNTR LALT(LSFT(KC_DOWN))
-#define KC_LAGV LALT(KC_GRV)
+#define KC_AGRV LALT(KC_GRV)
 #define KC_LNG2 KC_LANG2
 #define KC_LNG1 KC_LANG1
 #define KC_LG_A LGUI_T(KC_A)
