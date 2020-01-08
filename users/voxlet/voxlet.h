@@ -36,8 +36,10 @@
 #define KC_SGUI SGUI_T(KC_NO)
 #define KC_MEL1 MEH_T(KC_LANG1)
 #define KC_SFEN KC_SFTENT
-#define KC_NXTB LCTL(KC_TAB)
-#define KC_PVTB LCTL(LSFT(KC_TAB))
+// #define KC_NXTB LCTL(KC_TAB)
+// #define KC_PVTB LCTL(LSFT(KC_TAB))
+#define KC_NXTB RGUI(KC_RCBR)
+#define KC_PVTB RGUI(KC_LCBR)
 #define KC_EXPR LALT(LSFT(KC_UP))
 #define KC_CNTR LALT(LSFT(KC_DOWN))
 #define KC_AGRV LALT(KC_GRV)
